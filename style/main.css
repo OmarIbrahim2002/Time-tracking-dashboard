@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--VeryDarkBlue);
+    font-family: Rubik, Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --LightRed: hsl(15, 100%, 70%);
+    --SoftBlue: hsl(195, 74%, 62%);
+    --LightRed2: hsl(348, 100%, 68%);
+    --LimeGreen: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --SoftOrange: hsl(43, 84%, 65%);
+    --VeryDarkBlue: hsl(226, 43%, 10%);
+    --DarkBlue: hsl(235, 46%, 20%);
+    --DesaturatedBlue: hsl(235, 45%, 61%);
+    --PaleBlue: hsl(236, 100%, 87%);
+    --transition: 0.3s;
+    --radius-20: 20px;
+    --p-30: 30px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+& .info{
+    background: var(--DarkBlue);
+    border-radius: var(--radius-20);
+}
+
+& img{
+    max-width: 40%;
+    border: 4px solid white;
+    margin-bottom: 30px;
+    border-radius: 50%;
+}
+
+& .profile{
+    display: flex;
+    flex-direction: column;
+    background: var(--Blue);
+    padding: var(--p-30);
+    border-radius: var(--radius-20);
+    }
+    & .report{
+        color: var(--PaleBlue);
+        font-size: 12px;
+    }
+    & h1{
+        font-weight: lighter;
+        color: white;
+        margin-top: 5px;
+        margin-bottom: 55px;
+    }
+    & .option{
+        padding: var(--p-30);
+        color: var(--DesaturatedBlue);
+        transition: var(--transition);
+        cursor: pointer;
+        width: fit-content;
+    
+    & p:nth-child(2){
+        margin: 15px 0;
+    }
+    & p.active{
+        color: white;
+    }
+    & p:hover{
+        color: white;
+    }
+}
+/* ------------------------------- */
+& .trackingContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 735px;
+    margin-left: 20px;
+
+    & .tracking{
+        margin-right: 15px;
+    }
+
+    & .tracking.four,
+    .tracking.five,
+    .tracking.six{
+        margin-top: 70px;
+    }
+
+    & .card{
+        position: relative;
+        background: var(--DarkBlue);
+        width: 230px;
+        padding: 25px;
+        color: white;
+        border-radius: var(--radius-20);
+        transition: var(--transition);
+        cursor: pointer;
+
+        & .title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        & .time{
+            font-size: 55px;
+            margin-top: 30px;
+            margin-bottom: 5px;
+            font-weight: lighter;
+        }
+
+        & .days{
+            color: var(--PaleBlue);
+            font-size: 12px;
+        }
+    }
+    & .card:hover{
+        background: var(--DesaturatedBlue);
+    }
+}
+}
+.card::before{
+content: "";
+text-align: right;
+position: absolute;
+top: -45px;
+left: 0;
+background: var(--c);
+border-radius: var(--radius-20);
+background-size: cover;
+width: 100%;
+height: 100%;
+z-index: -1;
+transition: var(--transition);
+}
+.card::after{
+content: '';
+position: absolute;
+top: -50px;
+left: 0;
+background: var(--i) 90% 4% no-repeat;
+background-size: 68px;
+width: 100%;
+height: 100%;
+z-index: -1;
+transition: var(--transition);
+}
+.card:hover::before,
+.card:hover::after{
+top: -60px;
+}
+/* ----------------------------- */
+@media (max-width: 991px){
+    .container{
+        flex-direction: column;
+        padding: 12px;
+
+        & .profile{
+            flex-direction: row;
+            align-items: center;
+
+            & img{
+                max-width: 25%;
+                margin-bottom: 0;
+                margin-right: 10px;
+            }
+
+            & h1{
+                margin-bottom: 0;
+            }
+        }
+
+        & .option{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        & .option p{
+            display: inline;
+        }
+        & .option p:nth-child(2){
+            margin: 0 10px;
+        }
+
+        & .trackingContainer{
+            flex-direction: column;
+            margin-left: 0;
+            width: 100%;
+
+            & .tracking{
+                margin-top: 70px;
+                margin-right: 0;
+                width: 100%;
+
+                & .card{
+                    width: 100%;
+                }
+
+                & .timeLine{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    & .time{
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ----------------------------- */
+.hide{
+    display: none;
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- Font Link -->
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="stylesheet" href="style/main.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 12px; text-align: center; margin-top: 20px; color: white;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="info">
+      <div class="profile">
+        <img src="images/image-jeremy.png" alt="">
+  
+        <div class="name">
+          <p class="report">
+            Report for
+          </p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+  
+      <div class="option">
+        <p data-time=".daily">Daily</p>
+        <p class="active" data-time=".weekly">Weekly</p>
+        <p data-time=".monthly">Monthly</p>
+      </div>
+    </div>
+<!-- -------------- -->
+    <div class="trackingContainer">
+      <div class="tracking one">
+
+        <div class="card" style="--i:url(../images/icon-work.svg); --c:var(--LightRed)">
+          <div class="title">
+            <p>Work</p>
+            <p>...</p>
+          </div>
+
+    <div class="timeLine">
+      <div class="time">
+        <p class="daily hide">
+          5hrs
+        </p>
+        <p class="weekly">
+          32hrs
+        </p>
+        <p class="monthly hide">
+          103hrs
+        </p>
+      </div>
+
+      <div class="days">
+        <p class="daily hide">
+          Previous - 7hrs
+        </p>
+        <p class="weekly">
+          Previous - 36hrs
+        </p>
+        <p class="monthly hide">
+          Previous - 128hrs
+        </p>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="tracking two">
+
+        <div class="card" style="--i:url(../images/icon-play.svg); --c:var(--SoftBlue)">
+          <div class="title">
+            <p>Play</p>
+            <p>...</p>
+          </div>
+
+    <div class="timeLine">
+      <div class="time">
+        <p class="daily hide">
+          1hr
+        </p>
+        <p class="weekly">
+          10hrs
+        </p>
+        <p class="monthly hide">
+          23hrs
+        </p>
+      </div>
+
+      <div class="days">
+        <p class="daily hide">
+          Previous - 2hrs
+        </p>
+        <p class="weekly">
+          Previous - 8hrs
+        </p>
+        <p class="monthly hide">
+          Previous - 29hrs
+        </p>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="tracking three">
+
+        <div class="card" style="--i:url(../images/icon-study.svg); --c:var(--LightRed)">
+          <div class="title">
+            <p>Study</p>
+            <p>...</p>
+          </div>
+
+    <div class="timeLine">
+      <div class="time">
+        <p class="daily hide">
+          0hrs
+        </p>
+        <p class="weekly">
+          4hrs
+        </p>
+        <p class="monthly hide">
+          13hrs
+        </p>
+      </div>
+
+      <div class="days">
+        <p class="daily hide">
+          Previous - 1hrs
+        </p>
+        <p class="weekly">
+          Previous - 7hrs
+        </p>
+        <p class="monthly hide">
+          Previous - 19hrs
+        </p>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="tracking four">
+
+        <div class="card" style="--i:url(../images/icon-exercise.svg); --c:var(--LimeGreen)">
+          <div class="title">
+            <p>Exercise</p>
+            <p>...</p>
+          </div>
+
+    <div class="timeLine">
+      <div class="time">
+        <p class="daily hide">
+          1hr
+        </p>
+        <p class="weekly">
+          4hrs
+        </p>
+        <p class="monthly hide">
+          11hrs
+        </p>
+      </div>
+
+      <div class="days">
+        <p class="daily hide">
+          Previous - 1hrs
+        </p>
+        <p class="weekly">
+          Previous - 5hrs
+        </p>
+        <p class="monthly hide">
+          Previous - 18hrs
+        </p>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="tracking five">
+        <div class="card" style="--i:url(../images/icon-social.svg); --c:var(--Violet)">
+          <div class="title">
+            <p>Social</p>
+            <p>...</p>
+          </div>
+
+    <div class="timeLine">
+      <div class="time">
+        <p class="daily hide">
+          1hr
+        </p>
+        <p class="weekly">
+          5hrs
+        </p>
+        <p class="monthly hide">
+          21hrs
+        </p>
+      </div>
+
+      <div class="days">
+        <p class="daily hide">
+          Previous - 3hrs
+        </p>
+        <p class="weekly">
+          Previous - 10hrs
+        </p>
+        <p class="monthly hide">
+          Previous - 23hrs
+        </p>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="tracking six">
+
+        <div class="card" style="--i:url(../images/icon-self-care.svg); --c:var(--SoftOrange)">
+          <div class="title">
+            <p>Self Care</p>
+            <p>...</p>
+          </div>
+
+    <div class="timeLine">
+      <div class="time">
+        <p class="daily hide">
+          0hr
+        </p>
+        <p class="weekly">
+          2hrs
+        </p>
+        <p class="monthly hide">
+          7hrs
+        </p>
+      </div>
+
+      <div class="days">
+        <p class="daily hide">
+          Previous - 1hrs
+        </p>
+        <p class="weekly">
+          Previous - 2hrs
+        </p>
+        <p class="monthly hide">
+          Previous - 11hrs
+        </p>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/main.js"></script>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/OmarIbrahim2002" target="_blank">Omar Ibrahim Mohamed</a>.
+  </div>
+</body>
+</html>
